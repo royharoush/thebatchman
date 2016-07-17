@@ -58,7 +58,7 @@ start /b /wait "Resourcer" "%~dp0\bin\resourcer.exe" -op:add -src:"%temp%\%name%
 copy /b /y "%temp%\%name%.icx" + "%temp%\%name%.tmp" "%distexe%"
 
 :: Compress executable with UPX
-start /b /wait "Compressing" "bin\upx.exe" -1 -q "%distexe%"
+REM start /b /wait "Compressing" "bin\upx.exe" -1 -q "%distexe%"
 
 :: Cleaning
 if exist "%sfxconfig%" del /q /f "%sfxconfig%"
